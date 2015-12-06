@@ -2,6 +2,11 @@ unit uoclidata;
 interface
 uses SysUtils;
 
+// TCstDB provides constants for all other classes depending on the client.
+// Constants can be locations of client variables, delta values between blocks
+// of memory, addresses that point to code (for events) or flags for enabling
+// new features in later clients.
+
 type
   TCstDB           = class(TObject)
   public
@@ -93,11 +98,11 @@ type
     FFLAGS         : Cardinal;
     //////////////////////////
     constructor    Create;
-    procedure      Update(CliVer : String);
+    procedure      Update(CliVer : AnsiString);
   end;
 
 var
-  SupportedCli : String;
+  SupportedCli : AnsiString;
 
 implementation
 ////////////////////////////////////////////////////////////////////////////////
@@ -137,7 +142,7 @@ type
   TSysVarList = array[0..1023] of TSysVar;
   PSysVarList = ^TSysVarList;
   TClientList = packed record
-    Cli       : String;
+    Cli       : AnsiString;
     List      : PSysVarList;
   end;
 
@@ -11914,11 +11919,12 @@ const
 constructor TCstDB.Create;
 begin
   inherited Create;
-  Update('');
+  Update(''); // initialize all variables with zeroes
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
 function GetCst(Expr : TConstantNames; List : PSysVarList) : Cardinal;
+// get value from table
 var
   i : Integer;
 begin
@@ -11942,7 +11948,8 @@ begin
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-procedure TCstDB.Update(CliVer : String);
+procedure TCstDB.Update(CliVer : AnsiString);
+// reads client-specific values from tables and loads them into object
 var
   i    : Integer;
   List : PSysVarList;
@@ -12051,7 +12058,8 @@ begin
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-function GetSupportedCli : String;
+function GetSupportedCli : AnsiString;
+// assemble client list, space separated, also starts and ends with a space
 var
   i : Integer;
 begin
@@ -12063,6 +12071,5 @@ end;
 
 ////////////////////////////////////////////////////////////////////////////////
 initialization
-  // assemble client list and assign to static variable
-  SupportedCli:=GetSupportedCli;
+  SupportedCli:=GetSupportedCli; // assign to static variable
 end.
