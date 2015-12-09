@@ -2,6 +2,8 @@ unit uoversion;
 interface
 uses Windows, SysUtils, Classes, access;
 
+  // This unit provides version information of client executables.
+
   function GetExePath(PHnd : Cardinal) : AnsiString;
   function ScanVer(WHnd : Cardinal) : AnsiString;
 
