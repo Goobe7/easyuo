@@ -85,8 +85,8 @@ begin
     b:=b shl 4;
     case s[i] of
       '0'..'9': b:=b + Byte(s[i]) - 48;
-      'A'..'F': b:=b + Byte(s[i]) - 65;
-      'a'..'f': b:=b + Byte(s[i]) - 97;
+      'A'..'F': b:=b + Byte(s[i]) - 55;
+      'a'..'f': b:=b + Byte(s[i]) - 87;
     end;
     if i and 1 = 1 then Continue;
     Data:=Data+AnsiChar(b);
