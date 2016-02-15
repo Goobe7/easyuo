@@ -48,7 +48,7 @@ type
     function    GetVK(s : AnsiString) : Cardinal;
     procedure   RMem(MemPos : Cardinal; Buf : PAnsiChar; Length : Cardinal);
     procedure   WMem(MemPos : Cardinal; Buf : PAnsiChar; Length : Cardinal);
-    function    StdWait(Duration : Cardinal) : Boolean;
+    function    StdDelay(Duration : Cardinal) : Boolean;
     procedure   ClearFilter;
     procedure   RefreshFilter;
   public
@@ -162,7 +162,7 @@ begin
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-function TUOCmd.StdWait(Duration : Cardinal) : Boolean;
+function TUOCmd.StdDelay(Duration : Cardinal) : Boolean;
 begin
   Sleep(Duration);
   Result:=True;
@@ -185,7 +185,8 @@ begin
   FilterType:=TList.Create;
   FilterCont:=TList.Create;
 
-  if DFunc=nil then Delay:=@StdWait
+  // assign standard delay function if none is provided
+  if DFunc=nil then Delay:=@StdDelay
   else Delay:=DFunc;
 
   ZeroMemory(@ItemRes,SizeOf(ItemRes));

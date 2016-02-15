@@ -21,8 +21,9 @@ type
     procedure   Init(c : Cardinal);
     procedure   AddBin(s : AnsiString);   
     procedure   AddHex(s : AnsiString);
-    procedure   AddCVal(c : Cardinal);    
-    procedure   AddOffs(s : AnsiString);  
+    procedure   AddCVal(c : Cardinal);
+    procedure   AddWVal(w : Word);
+    procedure   AddOffs(s : AnsiString);
     procedure   AddLabel(s : AnsiString); 
     procedure   AddRelA(c : Cardinal);    
     procedure   AddRelB(s : AnsiString);  
@@ -102,6 +103,17 @@ var
 begin
   s:=#0#0#0#0;
   Move(c,s[1],4); // fill buffer
+  Data:=Data+s;   // add buffer
+end;
+
+////////////////////////////////////////////////////////////////////////////////
+procedure TAsmStr.AddWVal(w : Word);
+// adds an absolute word
+var
+  s : AnsiString;
+begin
+  s:=#0#0;
+  Move(w,s[1],2); // fill buffer
   Data:=Data+s;   // add buffer
 end;
 

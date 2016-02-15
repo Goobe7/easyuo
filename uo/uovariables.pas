@@ -165,6 +165,7 @@ end;
 
 ////////////////////////////////////////////////////////////////////////////////
 procedure TUOVar.RMem(MemPos : Cardinal; Buf : PAnsiChar; Length : Cardinal);
+// read from memory of currently selected client
 begin
   ZeroMemory(Buf,Length);
   if UOSel.Nr>0 then
@@ -173,6 +174,7 @@ end;
 
 ////////////////////////////////////////////////////////////////////////////////
 procedure TUOVar.WMem(MemPos : Cardinal; Buf : PAnsiChar; Length : Cardinal);
+// write to memory of currently selected client
 begin
   if UOSel.Nr>0 then
     WriteMem(UOSel.HProc,MemPos,Buf,Length);

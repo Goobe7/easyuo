@@ -63,7 +63,6 @@ type
     BSHOPPRICE     : Cardinal;
     BGUMPPTR       : Cardinal;
     BITEMSLOT      : Cardinal;
-    BMEMBASE       : Cardinal;
     BPACKETVER     : Cardinal;
     BLTARGTILE     : Cardinal;
     BLTARGX        : Cardinal;
@@ -120,7 +119,7 @@ type
     B_CONTX,B_CONTITEM,B_CONTNEXT,B_ENEMYHPVAL,B_SHOPCURRENT,
     B_SHOPNEXT,B_BILLFIRST,B_SKILLDIST,B_SYSMSGSTR,B_EVSKILLPAR,
     B_LLIFTEDTYPE,B_LLIFTEDKIND,B_LANG,B_TITHE,B_FINDREP,
-    B_SHOPPRICE,B_GUMPPTR,B_ITEMSLOT,B_MEMBASE,B_PACKETVER,B_LTARGTILE,
+    B_SHOPPRICE,B_GUMPPTR,B_ITEMSLOT,B_PACKETVER,B_LTARGTILE,
     B_LTARGX,B_STAT1,
     /// EVENTS ////////////
     E_REDIR,E_OLDDIR,E_EXMSGADDR,
@@ -149,7 +148,7 @@ type
 const
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70470 : array[0..79] of TSysVar = (
+  SysVar70470 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $005901B0),
     (Expr: C_CLILOGGED     ; Val: $006F7C4C),
@@ -203,7 +202,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -238,7 +236,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar704624 : array[0..79] of TSysVar = (
+  SysVar704624 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00590160),
     (Expr: C_CLILOGGED     ; Val: $006F7C4C),
@@ -292,7 +290,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -327,7 +324,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70460 : array[0..79] of TSysVar = (
+  SysVar70460 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $005900C0),
     (Expr: C_CLILOGGED     ; Val: $006F6C4C),
@@ -381,7 +378,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -416,7 +412,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar704589 : array[0..79] of TSysVar = (
+  SysVar704589 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $005900C0),
     (Expr: C_CLILOGGED     ; Val: $006F6C4C),
@@ -470,7 +466,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -505,7 +500,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar704577 : array[0..79] of TSysVar = (
+  SysVar704577 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00590040),
     (Expr: C_CLILOGGED     ; Val: $006F6C4C),
@@ -559,7 +554,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -594,7 +588,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar704565 : array[0..79] of TSysVar = (
+  SysVar704565 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $0058FFF0),
     (Expr: C_CLILOGGED     ; Val: $006F6C4C),
@@ -648,7 +642,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -683,7 +676,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar704010 : array[0..79] of TSysVar = (
+  SysVar704010 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $0058DD20),
     (Expr: C_CLILOGGED     ; Val: $006D8BDC),
@@ -737,7 +730,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -772,7 +764,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70380 : array[0..79] of TSysVar = (
+  SysVar70380 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $0058DDB0),
     (Expr: C_CLILOGGED     ; Val: $006D8BDC),
@@ -826,7 +818,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -861,7 +852,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar703523 : array[0..79] of TSysVar = (
+  SysVar703523 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $0058DD60),
     (Expr: C_CLILOGGED     ; Val: $006D8BDC),
@@ -915,7 +906,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -950,7 +940,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70353 : array[0..79] of TSysVar = (
+  SysVar70353 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $0058DC30),
     (Expr: C_CLILOGGED     ; Val: $006D8BDC),
@@ -1004,7 +994,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1039,7 +1028,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar703423 : array[0..79] of TSysVar = (
+  SysVar703423 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00591210),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1093,7 +1082,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1128,7 +1116,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar703415 : array[0..79] of TSysVar = (
+  SysVar703415 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $005911D0),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1182,7 +1170,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1217,7 +1204,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70346 : array[0..79] of TSysVar = (
+  SysVar70346 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00591170),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1271,7 +1258,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1306,7 +1292,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70342 : array[0..79] of TSysVar = (
+  SysVar70342 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00591120),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1360,7 +1346,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1395,7 +1380,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70331 : array[0..79] of TSysVar = (
+  SysVar70331 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $005910C0),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1449,7 +1434,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1484,7 +1468,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar703211 : array[0..79] of TSysVar = (
+  SysVar703211 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00591060),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1538,7 +1522,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1573,7 +1556,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70310 : array[0..79] of TSysVar = (
+  SysVar70310 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00591050),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1627,7 +1610,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1662,7 +1644,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70301 : array[0..79] of TSysVar = (
+  SysVar70301 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00590E60),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1716,7 +1698,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1751,7 +1732,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70292 : array[0..78] of TSysVar = (
+  SysVar70292 : array[0..77] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $005907E0),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1805,7 +1786,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1839,7 +1819,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar702766 : array[0..78] of TSysVar = (
+  SysVar702766 : array[0..77] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00590630),
     (Expr: C_CLILOGGED     ; Val: $006DA24C),
@@ -1893,7 +1873,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -1927,7 +1906,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70279 : array[0..78] of TSysVar = (
+  SysVar70279 : array[0..77] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00590440),
     (Expr: C_CLILOGGED     ; Val: $006D924C),
@@ -1981,7 +1960,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2015,7 +1993,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70277 : array[0..78] of TSysVar = (
+  SysVar70277 : array[0..77] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00590440),
     (Expr: C_CLILOGGED     ; Val: $006D924C),
@@ -2069,7 +2047,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2103,7 +2080,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70275 : array[0..78] of TSysVar = (
+  SysVar70275 : array[0..77] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $005903F0),
     (Expr: C_CLILOGGED     ; Val: $006D924C),
@@ -2157,7 +2134,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2191,7 +2167,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70264 : array[0..78] of TSysVar = (
+  SysVar70264 : array[0..77] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00590420),
     (Expr: C_CLILOGGED     ; Val: $006D924C),
@@ -2245,7 +2221,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2279,7 +2254,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70256 : array[0..78] of TSysVar = (
+  SysVar70256 : array[0..77] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $00590560),
     (Expr: C_CLILOGGED     ; Val: $006D924C),
@@ -2333,7 +2308,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2367,7 +2341,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70243 : array[0..78] of TSysVar = (
+  SysVar70243 : array[0..77] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $005902F0),
     (Expr: C_CLILOGGED     ; Val: $006D924C),
@@ -2421,7 +2395,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2455,7 +2428,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70220 : array[0..78] of TSysVar = (
+  SysVar70220 : array[0..77] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_BLOCKINFO     ; Val: $0058DCE0),
     (Expr: C_CLILOGGED     ; Val: $006D724C),
@@ -2509,7 +2482,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2543,7 +2515,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70212 : array[0..77] of TSysVar = (
+  SysVar70212 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D721C),
     (Expr: C_CLIXRES       ; Val: $006D77C4),
@@ -2596,7 +2568,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2630,7 +2601,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70211 : array[0..77] of TSysVar = (
+  SysVar70211 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D721C),
     (Expr: C_CLIXRES       ; Val: $006D77C4),
@@ -2683,7 +2654,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2717,7 +2687,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70200 : array[0..77] of TSysVar = (
+  SysVar70200 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D721C),
     (Expr: C_CLIXRES       ; Val: $006D77C4),
@@ -2770,7 +2740,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2804,7 +2773,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70191 : array[0..77] of TSysVar = (
+  SysVar70191 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D721C),
     (Expr: C_CLIXRES       ; Val: $006D77C4),
@@ -2857,7 +2826,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2891,7 +2859,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70190 : array[0..77] of TSysVar = (
+  SysVar70190 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D721C),
     (Expr: C_CLIXRES       ; Val: $006D77C4),
@@ -2944,7 +2912,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -2978,7 +2945,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70170 : array[0..77] of TSysVar = (
+  SysVar70170 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D721C),
     (Expr: C_CLIXRES       ; Val: $006D77C4),
@@ -3031,7 +2998,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3065,7 +3031,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70160 : array[0..77] of TSysVar = (
+  SysVar70160 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D721C),
     (Expr: C_CLIXRES       ; Val: $006D77C4),
@@ -3118,7 +3084,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3152,7 +3117,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70144 : array[0..77] of TSysVar = (
+  SysVar70144 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D6214),
     (Expr: C_CLIXRES       ; Val: $006D67BC),
@@ -3205,7 +3170,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3239,7 +3203,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70143 : array[0..77] of TSysVar = (
+  SysVar70143 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D6214),
     (Expr: C_CLIXRES       ; Val: $006D67BC),
@@ -3292,7 +3256,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3326,7 +3289,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70140 : array[0..77] of TSysVar = (
+  SysVar70140 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D6214),
     (Expr: C_CLIXRES       ; Val: $006D67BC),
@@ -3379,7 +3342,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3413,7 +3375,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70131 : array[0..77] of TSysVar = (
+  SysVar70131 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D6214),
     (Expr: C_CLIXRES       ; Val: $006D67BC),
@@ -3466,7 +3428,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3500,7 +3461,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70130 : array[0..77] of TSysVar = (
+  SysVar70130 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D6214),
     (Expr: C_CLIXRES       ; Val: $006D67BC),
@@ -3553,7 +3514,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3587,7 +3547,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70120 : array[0..77] of TSysVar = (
+  SysVar70120 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D3F24),
     (Expr: C_CLIXRES       ; Val: $006D44CC),
@@ -3640,7 +3600,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3674,7 +3633,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70112 : array[0..77] of TSysVar = (
+  SysVar70112 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D3F24),
     (Expr: C_CLIXRES       ; Val: $006D44CC),
@@ -3727,7 +3686,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3761,7 +3719,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70110 : array[0..77] of TSysVar = (
+  SysVar70110 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D3F24),
     (Expr: C_CLIXRES       ; Val: $006D44CC),
@@ -3814,7 +3772,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3848,7 +3805,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70102 : array[0..77] of TSysVar = (
+  SysVar70102 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D2F24),
     (Expr: C_CLIXRES       ; Val: $006D34CC),
@@ -3901,7 +3858,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -3935,7 +3891,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar70101 : array[0..77] of TSysVar = (
+  SysVar70101 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D2F24),
     (Expr: C_CLIXRES       ; Val: $006D34CC),
@@ -3988,7 +3944,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4022,7 +3977,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7090 : array[0..77] of TSysVar = (
+  SysVar7090 : array[0..76] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006D2F24),
     (Expr: C_CLIXRES       ; Val: $006D34CC),
@@ -4075,7 +4030,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4109,7 +4063,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7082 : array[0..76] of TSysVar = (
+  SysVar7082 : array[0..75] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006CD094),
     (Expr: C_CLIXRES       ; Val: $006CD63C),
@@ -4162,7 +4116,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4195,7 +4148,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7080 : array[0..75] of TSysVar = (
+  SysVar7080 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006CD094),
     (Expr: C_CLIXRES       ; Val: $006CD63C),
@@ -4248,7 +4201,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00000000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4280,7 +4232,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7071 : array[0..75] of TSysVar = (
+  SysVar7071 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006CB07C),
     (Expr: C_CLIXRES       ; Val: $006CB61C),
@@ -4333,7 +4285,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4365,7 +4316,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7070 : array[0..75] of TSysVar = (
+  SysVar7070 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006CB07C),
     (Expr: C_CLIXRES       ; Val: $006CB61C),
@@ -4418,7 +4369,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4450,7 +4400,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7064 : array[0..75] of TSysVar = (
+  SysVar7064 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006CA07C),
     (Expr: C_CLIXRES       ; Val: $006CA614),
@@ -4503,7 +4453,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4535,7 +4484,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7063 : array[0..75] of TSysVar = (
+  SysVar7063 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006CA07C),
     (Expr: C_CLIXRES       ; Val: $006CA614),
@@ -4588,7 +4537,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4620,7 +4568,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7050 : array[0..75] of TSysVar = (
+  SysVar7050 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006C907C),
     (Expr: C_CLIXRES       ; Val: $006C9614),
@@ -4673,7 +4621,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4705,7 +4652,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7045 : array[0..75] of TSysVar = (
+  SysVar7045 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006C607C),
     (Expr: C_CLIXRES       ; Val: $006C660C),
@@ -4758,7 +4705,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4790,7 +4736,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7044 : array[0..75] of TSysVar = (
+  SysVar7044 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006C507C),
     (Expr: C_CLIXRES       ; Val: $006C560C),
@@ -4843,7 +4789,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4875,7 +4820,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7043 : array[0..75] of TSysVar = (
+  SysVar7043 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006C607C),
     (Expr: C_CLIXRES       ; Val: $006C660C),
@@ -4928,7 +4873,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -4960,7 +4904,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7042 : array[0..75] of TSysVar = (
+  SysVar7042 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006C507C),
     (Expr: C_CLIXRES       ; Val: $006C560C),
@@ -5013,7 +4957,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5045,7 +4988,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7041 : array[0..75] of TSysVar = (
+  SysVar7041 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006C507C),
     (Expr: C_CLIXRES       ; Val: $006C560C),
@@ -5098,7 +5041,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5130,7 +5072,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7040 : array[0..75] of TSysVar = (
+  SysVar7040 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006C507C),
     (Expr: C_CLIXRES       ; Val: $006C560C),
@@ -5183,7 +5125,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5215,7 +5156,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7030 : array[0..75] of TSysVar = (
+  SysVar7030 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006C205C),
     (Expr: C_CLIXRES       ; Val: $006C25E4),
@@ -5268,7 +5209,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5300,7 +5240,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7021 : array[0..75] of TSysVar = (
+  SysVar7021 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006C105C),
     (Expr: C_CLIXRES       ; Val: $006C15E4),
@@ -5353,7 +5293,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5385,7 +5324,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7011 : array[0..75] of TSysVar = (
+  SysVar7011 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006BE05C),
     (Expr: C_CLIXRES       ; Val: $006BE5E4),
@@ -5438,7 +5377,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5470,7 +5408,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7004 : array[0..75] of TSysVar = (
+  SysVar7004 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006BE05C),
     (Expr: C_CLIXRES       ; Val: $006BE5E4),
@@ -5523,7 +5461,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5555,7 +5492,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7003 : array[0..75] of TSysVar = (
+  SysVar7003 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006BE05C),
     (Expr: C_CLIXRES       ; Val: $006BE5E4),
@@ -5608,7 +5545,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5640,7 +5576,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7002 : array[0..75] of TSysVar = (
+  SysVar7002 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006BE05C),
     (Expr: C_CLIXRES       ; Val: $006BE5E4),
@@ -5693,7 +5629,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5725,7 +5660,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar7000 : array[0..75] of TSysVar = (
+  SysVar7000 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $006BE05C),
     (Expr: C_CLIXRES       ; Val: $006BE5E4),
@@ -5778,7 +5713,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5810,7 +5744,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar60142 : array[0..75] of TSysVar = (
+  SysVar60142 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005E0D84),
     (Expr: C_CLIXRES       ; Val: $005E130C),
@@ -5863,7 +5797,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5895,7 +5828,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar60130 : array[0..75] of TSysVar = (
+  SysVar60130 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005E0D84),
     (Expr: C_CLIXRES       ; Val: $005E130C),
@@ -5948,7 +5881,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -5980,7 +5912,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar60124 : array[0..75] of TSysVar = (
+  SysVar60124 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005E0D84),
     (Expr: C_CLIXRES       ; Val: $005E130C),
@@ -6033,7 +5965,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -6065,7 +5996,7 @@ const
   );
 
 
-  SysVar60123 : array[0..75] of TSysVar = (
+  SysVar60123 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005E0D84),
     (Expr: C_CLIXRES       ; Val: $005E130C),
@@ -6118,7 +6049,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -6149,7 +6079,7 @@ const
     (Expr: LISTEND         ; Val: $00000000)
   );
 
-  SysVar60120 : array[0..75] of TSysVar = (
+  SysVar60120 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005E0D84),
     (Expr: C_CLIXRES       ; Val: $005E130C),
@@ -6202,7 +6132,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -6233,7 +6162,7 @@ const
     (Expr: LISTEND         ; Val: $00000000)
   );
 
-  SysVar60110 : array[0..75] of TSysVar = (
+  SysVar60110 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005DDD84),
     (Expr: C_CLIXRES       ; Val: $005DE30C),
@@ -6286,7 +6215,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -6317,7 +6245,7 @@ const
     (Expr: LISTEND         ; Val: $00000000)
   );
 
-  SysVar6080 : array[0..75] of TSysVar = (
+  SysVar6080 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005DC714),
     (Expr: C_CLIXRES       ; Val: $005DCC9C),
@@ -6370,7 +6298,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -6401,7 +6328,7 @@ const
     (Expr: LISTEND         ; Val: $00000000)
   );
 
-  SysVar6070 : array[0..75] of TSysVar = (
+  SysVar6070 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005DC714),
     (Expr: C_CLIXRES       ; Val: $005DCC9C),
@@ -6454,7 +6381,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -6487,7 +6413,7 @@ const
 
 ////////////////////////////////////////////////////////////////////////////////
 
-  SysVar6062 : array[0..75] of TSysVar = (
+  SysVar6062 : array[0..74] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005DC714),
     (Expr: C_CLIXRES       ; Val: $005DCC9C),
@@ -6540,7 +6466,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $0000001C),
     (Expr: B_LTARGX        ; Val: $000001A8),
@@ -6572,7 +6497,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6061 : array[0..73] of TSysVar = (
+  SysVar6061 : array[0..72] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE34C),
     (Expr: C_CLIXRES       ; Val: $005BFB80),
@@ -6625,7 +6550,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
@@ -6655,7 +6579,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6060 : array[0..73] of TSysVar = (
+  SysVar6060 : array[0..72] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BF394),
     (Expr: C_CLIXRES       ; Val: $005C0BC8),
@@ -6708,7 +6632,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
@@ -6738,7 +6661,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6050 : array[0..73] of TSysVar = (
+  SysVar6050 : array[0..72] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE34C),
     (Expr: C_CLIXRES       ; Val: $005BFB80),
@@ -6791,7 +6714,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
@@ -6821,7 +6743,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6040 : array[0..73] of TSysVar = (
+  SysVar6040 : array[0..72] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE34C),
     (Expr: C_CLIXRES       ; Val: $005BFB80),
@@ -6874,7 +6796,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
@@ -6904,7 +6825,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6030 : array[0..73] of TSysVar = (
+  SysVar6030 : array[0..72] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE34C),
     (Expr: C_CLIXRES       ; Val: $005BFB80),
@@ -6957,7 +6878,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
@@ -6987,7 +6907,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6017 : array[0..73] of TSysVar = (
+  SysVar6017 : array[0..72] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE34C),
     (Expr: C_CLIXRES       ; Val: $005BFB80),
@@ -7040,7 +6960,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_PACKETVER     ; Val: $00000001),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
@@ -7070,7 +6989,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6015 : array[0..71] of TSysVar = (
+  SysVar6015 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE34C),
     (Expr: C_CLIXRES       ; Val: $005BFB80),
@@ -7123,7 +7042,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7151,7 +7069,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6013 : array[0..71] of TSysVar = (
+  SysVar6013 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE34C),
     (Expr: C_CLIXRES       ; Val: $005BFB80),
@@ -7204,7 +7122,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7232,7 +7149,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6012 : array[0..71] of TSysVar = (
+  SysVar6012 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE2C4),
     (Expr: C_CLIXRES       ; Val: $005BFAF8),
@@ -7285,7 +7202,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7313,7 +7229,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6011 : array[0..71] of TSysVar = (
+  SysVar6011 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE2C4),
     (Expr: C_CLIXRES       ; Val: $005BFAF8),
@@ -7366,7 +7282,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7394,7 +7309,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar6000 : array[0..71] of TSysVar = (
+  SysVar6000 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE2C4),
     (Expr: C_CLIXRES       ; Val: $005BFAF8),
@@ -7447,7 +7362,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7475,7 +7389,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar5091 : array[0..71] of TSysVar = (
+  SysVar5091 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE2C4),
     (Expr: C_CLIXRES       ; Val: $005BFAF8),
@@ -7528,7 +7442,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7556,7 +7469,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar5090 : array[0..71] of TSysVar = (
+  SysVar5090 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE2C4),
     (Expr: C_CLIXRES       ; Val: $005BFAF8),
@@ -7609,7 +7522,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7637,7 +7549,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar5081 : array[0..71] of TSysVar = (
+  SysVar5081 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BD2A4),
     (Expr: C_CLIXRES       ; Val: $005BEAD8),
@@ -7690,7 +7602,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7718,7 +7629,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar5072 : array[0..71] of TSysVar = (
+  SysVar5072 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BF2A4),
     (Expr: C_CLIXRES       ; Val: $005C0AD8),
@@ -7771,7 +7682,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7799,7 +7709,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar5071 : array[0..71] of TSysVar = (
+  SysVar5071 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BF2A4),
     (Expr: C_CLIXRES       ; Val: $005C0AD8),
@@ -7852,7 +7762,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7880,7 +7789,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar5065 : array[0..71] of TSysVar = (
+  SysVar5065 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE2A4),
     (Expr: C_CLIXRES       ; Val: $005BFAD8),
@@ -7933,7 +7842,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -7961,7 +7869,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar505c : array[0..71] of TSysVar = (
+  SysVar505c : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BC284),
     (Expr: C_CLIXRES       ; Val: $005BDAB8),
@@ -8014,7 +7922,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8042,7 +7949,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar505a : array[0..71] of TSysVar = (
+  SysVar505a : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BC26C ),
     (Expr: C_CLIXRES       ; Val: $005BDAA0 ),
@@ -8095,7 +8002,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8123,7 +8029,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar504e : array[0..71] of TSysVar = (
+  SysVar504e : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BC26C ),
     (Expr: C_CLIXRES       ; Val: $005BDAA0 ),
@@ -8176,7 +8082,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8204,7 +8109,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar504d : array[0..71] of TSysVar = (
+  SysVar504d : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BC264 ),
     (Expr: C_CLIXRES       ; Val: $005BDA98 ),
@@ -8257,7 +8162,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8285,7 +8189,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar504b : array[0..71] of TSysVar = (
+  SysVar504b : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BC264 ),
     (Expr: C_CLIXRES       ; Val: $005BDA98 ),
@@ -8338,7 +8242,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8366,7 +8269,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar504a : array[0..71] of TSysVar = (
+  SysVar504a : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BC264 ),
     (Expr: C_CLIXRES       ; Val: $005BDA98 ),
@@ -8419,7 +8322,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8447,7 +8349,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar503 : array[0..71] of TSysVar = (
+  SysVar503 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BC264),
     (Expr: C_CLIXRES       ; Val: $005BDA98),
@@ -8500,7 +8402,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8528,7 +8429,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar502f : array[0..71] of TSysVar = (
+  SysVar502f : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BB264),
     (Expr: C_CLIXRES       ; Val: $005BCA98),
@@ -8581,7 +8482,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8609,7 +8509,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar502c : array[0..71] of TSysVar = (
+  SysVar502c : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE264),
     (Expr: C_CLIXRES       ; Val: $005BFA98),
@@ -8662,7 +8562,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8690,7 +8589,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar502b : array[0..71] of TSysVar = (
+  SysVar502b : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE264),
     (Expr: C_CLIXRES       ; Val: $005BFA98),
@@ -8743,7 +8642,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8771,7 +8669,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar502a : array[0..71] of TSysVar = (
+  SysVar502a : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BE264),
     (Expr: C_CLIXRES       ; Val: $005BFA98),
@@ -8824,7 +8722,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8852,7 +8749,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar502 : array[0..71] of TSysVar = (
+  SysVar502 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005BD2AC),
     (Expr: C_CLIXRES       ; Val: $005BEAC4),
@@ -8905,7 +8802,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00868000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -8926,14 +8822,14 @@ const
     /// FEATURES //////////
     (Expr: F_EXTSTAT       ; Val: $00000001),
     (Expr: F_EVPROPERTY    ; Val: $00000001),
-    (Expr: F_MACROMAP      ; Val: $00000002),
+    (Expr: F_MACROMAP      ; Val: $00000001),
     (Expr: F_EXCHARSTATC   ; Val: $00000014),
     /// END ///////////////
     (Expr: LISTEND         ; Val: $00000000)
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar501j : array[0..71] of TSysVar = (
+  SysVar501j : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005ADD1C),
     (Expr: C_CLIXRES       ; Val: $005AF4A8),
@@ -8986,7 +8882,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00850000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9014,7 +8909,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar501i : array[0..71] of TSysVar = (
+  SysVar501i : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005ADD1C),
     (Expr: C_CLIXRES       ; Val: $005AF490),
@@ -9067,7 +8962,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00850000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9095,7 +8989,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar501f : array[0..71] of TSysVar = (
+  SysVar501f : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005ADD1C),
     (Expr: C_CLIXRES       ; Val: $005AF484),
@@ -9148,7 +9042,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00850000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9176,7 +9069,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar501d : array[0..71] of TSysVar = (
+  SysVar501d : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005ADCE4),
     (Expr: C_CLIXRES       ; Val: $005AF44C),
@@ -9229,7 +9122,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00850000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9257,7 +9149,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar501d1 : array[0..71] of TSysVar = (
+  SysVar501d1 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005ABCD4),
     (Expr: C_CLIXRES       ; Val: $005AD43C),
@@ -9310,7 +9202,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00850000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9338,7 +9229,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar501a : array[0..71] of TSysVar = (
+  SysVar501a : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005ABC94),
     (Expr: C_CLIXRES       ; Val: $005AD3FC),
@@ -9391,7 +9282,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00850000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9419,7 +9309,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar501a1 : array[0..71] of TSysVar = (
+  SysVar501a1 : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005ABC94),
     (Expr: C_CLIXRES       ; Val: $005AD3FC),
@@ -9472,7 +9362,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00850000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9500,7 +9389,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar500b : array[0..71] of TSysVar = (
+  SysVar500b : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A9C94),
     (Expr: C_CLIXRES       ; Val: $005AB3FC),
@@ -9553,7 +9442,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00850000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9581,7 +9469,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar500a : array[0..71] of TSysVar = (
+  SysVar500a : array[0..70] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A9C94),
     (Expr: C_CLIXRES       ; Val: $005AB3FC),
@@ -9634,7 +9522,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00850000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9662,7 +9549,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar4011e : array[0..70] of TSysVar = (
+  SysVar4011e : array[0..69] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A0AE4),
     (Expr: C_CLIXRES       ; Val: $005A2328),
@@ -9714,7 +9601,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9742,7 +9628,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar4011c : array[0..70] of TSysVar = (
+  SysVar4011c : array[0..69] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A0AE4),
     (Expr: C_CLIXRES       ; Val: $005A2320),
@@ -9794,7 +9680,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9822,7 +9707,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar4011b : array[0..70] of TSysVar = (
+  SysVar4011b : array[0..69] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A0AE4),
     (Expr: C_CLIXRES       ; Val: $005A2320),
@@ -9874,7 +9759,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9902,7 +9786,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar4011a : array[0..70] of TSysVar = (
+  SysVar4011a : array[0..69] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A0AE4),
     (Expr: C_CLIXRES       ; Val: $005A233C),
@@ -9954,7 +9838,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -9982,7 +9865,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar4010b : array[0..69] of TSysVar = (
+  SysVar4010b : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0059D53C),
     (Expr: C_CLIXRES       ; Val: $0059ED50),
@@ -10034,7 +9917,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10061,7 +9943,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar4010a : array[0..69] of TSysVar = (
+  SysVar4010a : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0059D53C),
     (Expr: C_CLIXRES       ; Val: $0059ED50),
@@ -10113,7 +9995,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000044),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10140,7 +10021,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar409a : array[0..69] of TSysVar = (
+  SysVar409a : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0059A53C),
     (Expr: C_CLIXRES       ; Val: $0059BCE8),
@@ -10192,7 +10073,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10219,7 +10099,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar407b : array[0..69] of TSysVar = (
+  SysVar407b : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0059A504),
     (Expr: C_CLIXRES       ; Val: $0059BCB0),
@@ -10271,7 +10151,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10298,7 +10177,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar407a : array[0..69] of TSysVar = (
+  SysVar407a : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0059A504),
     (Expr: C_CLIXRES       ; Val: $0059BCB0),
@@ -10350,7 +10229,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10377,7 +10255,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar406a : array[0..69] of TSysVar = (
+  SysVar406a : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0059A504),
     (Expr: C_CLIXRES       ; Val: $0059BC50),
@@ -10429,7 +10307,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10456,7 +10333,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar405b : array[0..69] of TSysVar = (
+  SysVar405b : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0059A4F4),
     (Expr: C_CLIXRES       ; Val: $0059BC40),
@@ -10508,7 +10385,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10535,7 +10411,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar405a : array[0..69] of TSysVar = (
+  SysVar405a : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0059A4DC),
     (Expr: C_CLIXRES       ; Val: $0059BC28),
@@ -10587,7 +10463,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10614,7 +10489,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar404t : array[0..69] of TSysVar = (
+  SysVar404t : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0059A4DC),
     (Expr: C_CLIXRES       ; Val: $0059BC28),
@@ -10666,7 +10541,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10693,7 +10567,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar404b : array[0..69] of TSysVar = (
+  SysVar404b : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $00593314),
     (Expr: C_CLIXRES       ; Val: $00594A2C),
@@ -10745,7 +10619,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10772,7 +10645,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar404a : array[0..69] of TSysVar = (
+  SysVar404a : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $00593314),
     (Expr: C_CLIXRES       ; Val: $00594A2C),
@@ -10824,7 +10697,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10851,7 +10723,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar403e : array[0..69] of TSysVar = (
+  SysVar403e : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005932EC),
     (Expr: C_CLIXRES       ; Val: $00594A04),
@@ -10903,7 +10775,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -10930,7 +10801,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar403d : array[0..69] of TSysVar = (
+  SysVar403d : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005932FC),
     (Expr: C_CLIXRES       ; Val: $00594A14),
@@ -10982,7 +10853,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -11009,7 +10879,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar403c : array[0..69] of TSysVar = (
+  SysVar403c : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005922FC),
     (Expr: C_CLIXRES       ; Val: $005939FC),
@@ -11061,7 +10931,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $00000030),
     (Expr: B_GUMPPTR       ; Val: $00000038),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -11088,7 +10957,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar403b : array[0..69] of TSysVar = (
+  SysVar403b : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A8DDC),
     (Expr: C_CLIXRES       ; Val: $005AB33C),
@@ -11140,7 +11009,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $0000002C),
     (Expr: B_GUMPPTR       ; Val: $00000034),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -11167,7 +11035,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar403a : array[0..69] of TSysVar = (
+  SysVar403a : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A1E4C),
     (Expr: C_CLIXRES       ; Val: $005A4AA4),
@@ -11219,7 +11087,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $0000002C),
     (Expr: B_GUMPPTR       ; Val: $00000034),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -11246,7 +11113,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar402a : array[0..69] of TSysVar = (
+  SysVar402a : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A1E34),
     (Expr: C_CLIXRES       ; Val: $005A4A84),
@@ -11298,7 +11165,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $0000002C),
     (Expr: B_GUMPPTR       ; Val: $00000034),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -11325,7 +11191,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar401b : array[0..69] of TSysVar = (
+  SysVar401b : array[0..68] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005A11FC),
     (Expr: C_CLIXRES       ; Val: $005A3E4C),
@@ -11377,7 +11243,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $0000002C),
     (Expr: B_GUMPPTR       ; Val: $00000034),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -11404,7 +11269,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar400c : array[0..64] of TSysVar = (
+  SysVar400c : array[0..63] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0058A8CC),
     (Expr: C_CLIXRES       ; Val: $0058D394),
@@ -11456,7 +11321,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $0000002C),
     (Expr: B_GUMPPTR       ; Val: $00000034),
     (Expr: B_ITEMSLOT      ; Val: $00000025),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -11478,7 +11342,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar300c : array[0..61] of TSysVar = (
+  SysVar300c : array[0..60] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005211CC),
     (Expr: C_CLIXRES       ; Val: $005239C8),
@@ -11525,7 +11389,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $0000002C),
     (Expr: B_GUMPPTR       ; Val: $00000034),
     (Expr: B_ITEMSLOT      ; Val: $00000021),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -11549,7 +11412,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar203 : array[0..61] of TSysVar = (
+  SysVar203 : array[0..60] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $0050A1C4),
     (Expr: C_CLIXRES       ; Val: $0050CC3C),
@@ -11596,7 +11459,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $0000002C),
     (Expr: B_GUMPPTR       ; Val: $00000034),
     (Expr: B_ITEMSLOT      ; Val: $00000021),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -11620,7 +11482,7 @@ const
   );
 
 ////////////////////////////////////////////////////////////////////////////////
-  SysVar200 : array[0..61] of TSysVar = (
+  SysVar200 : array[0..60] of TSysVar = (
     /// VARIABLES /////////
     (Expr: C_CLILOGGED     ; Val: $005000FC),
     (Expr: C_CLIXRES       ; Val: $0050284C),
@@ -11667,7 +11529,6 @@ const
     (Expr: B_SHOPPRICE     ; Val: $0000002C),
     (Expr: B_GUMPPTR       ; Val: $00000034),
     (Expr: B_ITEMSLOT      ; Val: $00000021),
-    (Expr: B_MEMBASE       ; Val: $00830000),
     (Expr: B_LTARGTILE     ; Val: $00000028),
     (Expr: B_LTARGX        ; Val: $00000020),
     /// EVENTS ////////////
@@ -12022,7 +11883,6 @@ begin
   BSHOPPRICE:=GetCst(B_SHOPPRICE,List);
   BGUMPPTR:=GetCst(B_GUMPPTR,List);
   BITEMSLOT:=GetCst(B_ITEMSLOT,List);
-  BMEMBASE:=GetCst(B_MEMBASE,List);
   BPACKETVER:=GetCst(B_PACKETVER,List);
   BLTARGTILE:=GetCst(B_LTARGTILE,List);
   BLTARGX:=GetCst(B_LTARGX,List);
