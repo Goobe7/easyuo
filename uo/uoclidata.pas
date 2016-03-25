@@ -147,6 +147,95 @@ type
 
 const
 
+
+////////////////////////////////////////////////////////////////////////////////
+  SysVar704762 : array[0..78] of TSysVar = (
+    /// VARIABLES /////////
+    (Expr: C_BLOCKINFO     ; Val: $00590320),
+    (Expr: C_CLILOGGED     ; Val: $006F7C4C),
+    (Expr: C_CLIXRES       ; Val: $006F81F4),
+    (Expr: C_ENEMYID       ; Val: $0096F074),
+    (Expr: C_SHARDPOS      ; Val: $00974EC8),
+    (Expr: C_NEXTCPOS      ; Val: $00975064),
+    (Expr: C_SYSMSG        ; Val: $00975AEC),
+    (Expr: C_CONTPOS       ; Val: $00975B0C),
+    (Expr: C_ENEMYHITS     ; Val: $00A3DCF4),
+    (Expr: C_LHANDID       ; Val: $00A96274),
+    (Expr: C_CHARDIR       ; Val: $00A97030),
+    (Expr: C_TARGETCNT     ; Val: $00000000),
+    (Expr: C_CURSORKIND    ; Val: $00A9B755),
+    (Expr: C_TARGETCURS    ; Val: $00A9B7B4),
+    (Expr: C_CLILEFT       ; Val: $00A9B7E0),
+    (Expr: C_CHARPTR       ; Val: $00ADC474),
+    (Expr: C_LLIFTEDID     ; Val: $00ADC4C0),
+    (Expr: C_LSHARD        ; Val: $00AE0B0C),
+    (Expr: C_POPUPID       ; Val: $00AE0C7C),
+    (Expr: C_JOURNALPTR    ; Val: $00B18E10),
+    (Expr: C_SKILLCAPS     ; Val: $00B5B100),
+    (Expr: C_SKILLLOCK     ; Val: $00B5B0C4),
+    (Expr: C_SKILLSPOS     ; Val: $00B5B178),
+    /// BASE CONSTANTS ////
+    (Expr: B_TARGPROC      ; Val: $0000000C),
+    (Expr: B_CHARSTATUS    ; Val: $00000024),
+    (Expr: B_ITEMID        ; Val: $000000A8),
+    (Expr: B_ITEMTYPE      ; Val: $00000038),
+    (Expr: B_ITEMSTACK     ; Val: $0000003E),
+    (Expr: B_STATNAME      ; Val: $000000C4),
+    (Expr: B_STATWEIGHT    ; Val: $00000038),
+    (Expr: B_STATAR        ; Val: $00000038),
+    (Expr: B_STATML        ; Val: $00000004),
+    (Expr: B_CONTSIZEX     ; Val: $00000024),
+    (Expr: B_CONTX         ; Val: $00000034),
+    (Expr: B_CONTITEM      ; Val: $0000004C),
+    (Expr: B_CONTNEXT      ; Val: $00000058),
+    (Expr: B_ENEMYHPVAL    ; Val: $000000C4),
+    (Expr: B_SHOPCURRENT   ; Val: $000000CC),
+    (Expr: B_SHOPNEXT      ; Val: $00000044),
+    (Expr: B_BILLFIRST     ; Val: $000000DC),
+    (Expr: B_SKILLDIST     ; Val: $00000078),
+    (Expr: B_SYSMSGSTR     ; Val: $00000100),
+    (Expr: B_EVSKILLPAR    ; Val: $000000D8),
+    (Expr: B_LLIFTEDTYPE   ; Val: $00000004),
+    (Expr: B_LLIFTEDKIND   ; Val: $00000038),
+    (Expr: B_LANG          ; Val: $00000060),
+    (Expr: B_TITHE         ; Val: $00000084),
+    (Expr: B_FINDREP       ; Val: $000001B4),
+    (Expr: B_SHOPPRICE     ; Val: $00000030),
+    (Expr: B_GUMPPTR       ; Val: $00000044),
+    (Expr: B_ITEMSLOT      ; Val: $00000025),
+    (Expr: B_PACKETVER     ; Val: $00000001),
+    (Expr: B_LTARGTILE     ; Val: $0000001C),
+    (Expr: B_LTARGX        ; Val: $000001A8),
+    (Expr: B_STAT1         ; Val: $0000001C),
+    /// EVENTS ////////////
+    (Expr: E_REDIR         ; Val: $00598DAD),
+    (Expr: E_OLDDIR        ; Val: $0061E120),
+    (Expr: E_EXMSGADDR     ; Val: $005A5D20),
+    (Expr: E_ITEMPROPID    ; Val: $00A921E4),
+    (Expr: E_ITEMNAMEADDR  ; Val: $00576BE0),
+    (Expr: E_ITEMPROPADDR  ; Val: $00576AE0),
+    (Expr: E_ITEMCHECKADDR ; Val: $0043DAE0),
+    (Expr: E_ITEMREQADDR   ; Val: $0043EE40),
+    (Expr: E_PATHFINDADDR  ; Val: $00503229),
+    (Expr: E_SLEEPADDR     ; Val: $006820EC),
+    (Expr: E_DRAGADDR      ; Val: $005A7460),
+    (Expr: E_SYSMSGADDR    ; Val: $005D3490),
+    (Expr: E_MACROADDR     ; Val: $0057EEE0),
+    (Expr: E_SENDPACKET    ; Val: $0045CD70),
+    (Expr: E_CONTTOP       ; Val: $004DC320),
+    (Expr: E_STATBAR       ; Val: $00546790),
+    /// FEATURES //////////
+    (Expr: F_EXTSTAT       ; Val: $00000001),
+    (Expr: F_EVPROPERTY    ; Val: $00000001),
+    (Expr: F_MACROMAP      ; Val: $00000001),
+    (Expr: F_EXCHARSTATC   ; Val: $00000018),
+    (Expr: F_PACKETVER     ; Val: $00000001),
+    (Expr: F_PATHFINDVER   ; Val: $00000001),
+    (Expr: F_FLAGS         ; Val: $00000001),
+    /// END ///////////////
+    (Expr: LISTEND         ; Val: $00000000)
+  );
+
 ////////////////////////////////////////////////////////////////////////////////
   SysVar70470 : array[0..78] of TSysVar = (
     /// VARIABLES /////////
@@ -11553,7 +11642,11 @@ const
 
 ////////////////////////////////////////////////////////////////////////////////
 
-  ClientList : array[0..219] of TClientList = (
+  ClientList : array[0..223] of TClientList = (
+    (Cli: '7.0.49.2';  List: @SysVar704762; ),
+    (Cli: '7.0.49.0';  List: @SysVar704762; ),
+    (Cli: '7.0.48.0';  List: @SysVar704762; ),
+    (Cli: '7.0.47.62'; List: @SysVar704762; ),
     (Cli: '7.0.47.0';  List: @SysVar70470;  ),
     (Cli: '7.0.46.24'; List: @SysVar704624; ),
     (Cli: '7.0.46.2';  List: @SysVar70460;  ),
