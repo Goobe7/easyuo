@@ -817,12 +817,9 @@ end;
 
 ////////////////////////////////////////////////////////////////////////////////
 function TUOVar.CliLang : AnsiString;
-var
-  s : AnsiString;
 begin
-  s:=#0#0#0;
-  RMem(Cst.LHANDID-Cst.BLANG,@s[1],3);
-  Result:=PAnsiChar(s);
+  SetLength(Result,3);
+  RMem(Cst.LHANDID-Cst.BLANG,@Result[1],3);
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
