@@ -1,0 +1,303 @@
+object MainForm: TMainForm
+  Left = 255
+  Height = 433
+  Top = 127
+  Width = 641
+  BorderStyle = bsSingle
+  Caption = 'Demo1'
+  ClientHeight = 433
+  ClientWidth = 641
+  Position = poDesktopCenter
+  LCLVersion = '1.6.0.4'
+  object Label1: TLabel
+    Left = 17
+    Height = 15
+    Top = 15
+    Width = 65
+    Caption = 'Commands:'
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+  end
+  object OpenClientButton: TButton
+    Tag = 1
+    Left = 16
+    Height = 25
+    Top = 40
+    Width = 139
+    Caption = 'OpenClient'
+    OnClick = ButtonHandler
+    TabOrder = 0
+  end
+  object CloseClientButton: TButton
+    Tag = 2
+    Left = 168
+    Height = 25
+    Top = 40
+    Width = 139
+    Caption = 'CloseClient'
+    OnClick = ButtonHandler
+    TabOrder = 1
+  end
+  object HideItemButton: TButton
+    Tag = 3
+    Left = 16
+    Height = 25
+    Top = 72
+    Width = 139
+    Caption = 'HideItem'
+    OnClick = ButtonHandler
+    TabOrder = 2
+  end
+  object HideItemEdit: TEdit
+    Left = 168
+    Height = 23
+    Hint = 'Enter ID of item'
+    Top = 72
+    Width = 136
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+    Text = '0'
+  end
+  object MsgButton: TButton
+    Tag = 4
+    Left = 16
+    Height = 25
+    Top = 104
+    Width = 139
+    Caption = 'Msg'
+    OnClick = ButtonHandler
+    TabOrder = 4
+  end
+  object MsgEdit: TEdit
+    Left = 168
+    Height = 23
+    Top = 104
+    Width = 136
+    ParentShowHint = False
+    TabOrder = 5
+    Text = 'Test123'
+  end
+  object MoveButton: TButton
+    Tag = 5
+    Left = 16
+    Height = 25
+    Top = 136
+    Width = 139
+    Caption = 'Move'
+    OnClick = ButtonHandler
+    TabOrder = 6
+  end
+  object MoveXEdit: TEdit
+    Left = 168
+    Height = 23
+    Top = 136
+    Width = 64
+    ParentShowHint = False
+    TabOrder = 7
+    Text = '0'
+  end
+  object MoveYEdit: TEdit
+    Left = 240
+    Height = 23
+    Top = 136
+    Width = 64
+    ParentShowHint = False
+    TabOrder = 8
+    Text = '0'
+  end
+  object KeyEdit: TEdit
+    Left = 168
+    Height = 23
+    Top = 168
+    Width = 136
+    ParentShowHint = False
+    TabOrder = 9
+    Text = 'F1'
+  end
+  object KeyButton: TButton
+    Tag = 6
+    Left = 16
+    Height = 25
+    Top = 168
+    Width = 139
+    Caption = 'Key'
+    OnClick = ButtonHandler
+    TabOrder = 10
+  end
+  object Label2: TLabel
+    Left = 17
+    Height = 15
+    Top = 208
+    Width = 37
+    Caption = 'Events:'
+    Font.Style = [fsUnderline]
+    ParentColor = False
+    ParentFont = False
+  end
+  object SysMessageButton: TButton
+    Tag = 7
+    Left = 17
+    Height = 25
+    Top = 232
+    Width = 139
+    Caption = 'SysMessage'
+    OnClick = ButtonHandler
+    TabOrder = 11
+  end
+  object SysMessageEdit: TEdit
+    Left = 169
+    Height = 23
+    Top = 234
+    Width = 136
+    ParentShowHint = False
+    TabOrder = 12
+    Text = 'Test123'
+  end
+  object ExMsgButton: TButton
+    Tag = 8
+    Left = 17
+    Height = 25
+    Top = 264
+    Width = 139
+    Caption = 'ExMsg'
+    OnClick = ButtonHandler
+    TabOrder = 13
+  end
+  object ExMsgEdit: TEdit
+    Left = 169
+    Height = 23
+    Top = 266
+    Width = 136
+    ParentShowHint = False
+    TabOrder = 14
+    Text = 'Test123'
+  end
+  object StatBarButton: TButton
+    Tag = 9
+    Left = 17
+    Height = 25
+    Top = 296
+    Width = 139
+    Caption = 'StatBar'
+    OnClick = ButtonHandler
+    TabOrder = 15
+  end
+  object PopupButton: TButton
+    Tag = 13
+    Left = 169
+    Height = 25
+    Top = 296
+    Width = 139
+    Caption = 'Popup'
+    OnClick = ButtonHandler
+    TabOrder = 16
+  end
+  object DragButton: TButton
+    Tag = 10
+    Left = 17
+    Height = 25
+    Top = 328
+    Width = 139
+    Caption = 'Drag'
+    OnClick = ButtonHandler
+    TabOrder = 17
+  end
+  object DragEdit: TEdit
+    Left = 169
+    Height = 23
+    Hint = 'Enter ID of item'
+    Top = 328
+    Width = 136
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 18
+    Text = '0'
+  end
+  object PathfindButton: TButton
+    Tag = 11
+    Left = 17
+    Height = 25
+    Top = 360
+    Width = 139
+    Caption = 'Pathfind'
+    OnClick = ButtonHandler
+    TabOrder = 19
+  end
+  object PathfindXEdit: TEdit
+    Left = 169
+    Height = 23
+    Top = 362
+    Width = 64
+    ParentShowHint = False
+    TabOrder = 20
+    Text = '0'
+  end
+  object PathfindYEdit: TEdit
+    Left = 241
+    Height = 23
+    Top = 362
+    Width = 64
+    ParentShowHint = False
+    TabOrder = 21
+    Text = '0'
+  end
+  object MacroButton: TButton
+    Tag = 12
+    Left = 17
+    Height = 25
+    Top = 392
+    Width = 139
+    Caption = 'Macro'
+    OnClick = ButtonHandler
+    TabOrder = 22
+  end
+  object Macro1Edit: TEdit
+    Left = 169
+    Height = 23
+    Top = 394
+    Width = 64
+    ParentShowHint = False
+    TabOrder = 23
+    Text = '18'
+  end
+  object Macro2Edit: TEdit
+    Left = 241
+    Height = 23
+    Top = 394
+    Width = 64
+    ParentShowHint = False
+    TabOrder = 24
+    Text = '0'
+  end
+  object VarScrollBox: TScrollBox
+    Left = 320
+    Height = 402
+    Top = 15
+    Width = 304
+    HorzScrollBar.Page = 13
+    HorzScrollBar.Tracking = True
+    VertScrollBar.Page = 19
+    VertScrollBar.Tracking = True
+    ClientHeight = 398
+    ClientWidth = 300
+    Color = clWindow
+    ParentColor = False
+    TabOrder = 25
+    object VarLabel: TLabel
+      Left = 4
+      Height = 15
+      Top = 4
+      Width = 9
+      Caption = '...'
+      ParentColor = False
+    end
+  end
+  object RefreshTimer: TTimer
+    Interval = 100
+    OnTimer = RefreshTimerTimer
+    left = 560
+    top = 32
+  end
+end
