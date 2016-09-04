@@ -17,8 +17,9 @@ type
     HideItemEdit: TEdit;
     KeyButton: TButton;
     KeyEdit: TEdit;
-    Label1: TLabel;
-    Label2: TLabel;
+    CommandLabel: TLabel;
+    EventLabel: TLabel;
+    VariableLabel: TLabel;
     Macro1Edit: TEdit;
     Macro2Edit: TEdit;
     MacroButton: TButton;
