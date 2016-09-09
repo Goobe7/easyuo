@@ -562,12 +562,22 @@ function TUOWrap.MType(Name : String) : Integer;
 // returns type information
 var
   Res : TFindRes;
+  i   : Integer;
 begin
   Result:=ERR_NOTFOUND;
   if not Find_First(Res,Name,@UOTbl,High(UOTbl)+1) then Exit;
   Result:=RES_OK;
 
-  Stack.PushInteger(UOTbl[Res.Idx].T);
+  case UOTbl[Res.Idx].T of
+    RO: i:=1;
+    RW: i:=2;
+    ME: i:=3;
+    EV: i:=4;
+    CM: i:=5;
+    QY: i:=6;
+  end;
+
+  Stack.PushInteger(i);
   repeat
     Stack.PushStrRef(UOTbl[Res.Idx].P);
   until not Find_Next(Res);

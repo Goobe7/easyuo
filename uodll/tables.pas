@@ -21,8 +21,9 @@ const
   RO = 01;
   RW = 02;
   ME = 04;
-  CM = 08;
-  QY = 16;
+  EV = 08;
+  CM = 16;
+  QY = 32;
 
   function Find_First(out Res : TFindRes; Name : String; Table : PAItem; Cnt : Integer) : Boolean;
   function Find_Next(var Res : TFindRes) : Boolean;
