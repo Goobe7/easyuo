@@ -1,6 +1,6 @@
 unit uovariables;
 interface
-uses Windows, SysUtils, Classes, access, asmstring, uoselector, uoclidata;
+uses Windows, SysUtils, Classes, asmstring, uoselector, uoclidata, global;
 
 type
   TUOVar        = class(TObject)

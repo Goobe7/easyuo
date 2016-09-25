@@ -1,6 +1,7 @@
 unit wrapper;
 interface
-uses SysUtils, stack, tables, uoselector, uovariables, uocommands, uoevents, access;
+uses SysUtils, stack, tables, uoselector, uovariables, uocommands, uoevents,
+     global;
 
 type
   TDelayProc    = function(Duration : Cardinal; Info : Pointer) : Boolean; stdcall;
@@ -12,10 +13,10 @@ type
     UOEvent     : TUOEvent;
     DelayInfo   : Pointer;
     DelayProc   : TDelayProc;
-    function    MGet(Name : String) : Integer;
-    function    MSet(Name : String) : Integer;
-    function    MCall(Name : String) : Integer;
-    function    MType(Name : String) : Integer;
+    function    MGet(Name : AnsiString) : Integer;
+    function    MSet(Name : AnsiString) : Integer;
+    function    MCall(Name : AnsiString) : Integer;
+    function    MType(Name : AnsiString) : Integer;
     function    MDelay(Duration : Cardinal) : Boolean;
   public
     Stack       : TStack;
@@ -34,14 +35,14 @@ const
   ERR_WRONGPAR = -2;
   ERR_GENERIC  = -3;
 
-  ErrStrings : array[-3..0] of PChar = (
+  ErrStrings : array[-3..0] of PAnsiChar = (
     'ERR_GENERIC',  // -3
     'ERR_WRONGPAR', // -2
     'ERR_NOTFOUND', // -1
     'RES_OK'        //  0
   );
 
-  InitString : PChar =
+  InitString : PAnsiChar =
     ' local exec = ...'+
     ' local function ge(...) return exec("Get",...) end'+
     ' local function se(...) return exec("Set",...) end'+
@@ -246,7 +247,7 @@ begin
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-function TUOWrap.MGet(Name : String) : Integer;
+function TUOWrap.MGet(Name : AnsiString) : Integer;
 // gets the value of a variable
 var
   Res : TFindRes;
@@ -260,7 +261,7 @@ begin
 
     with Stack,UOVar,UOSel do
     case UOTbl[Res.Idx].C of
-      177: PushStrVal(PChar(CliTitle));
+      177: PushStrVal(PAnsiChar(CliTitle));
       178: PushBoolean(TargCurs);
       179: PushInteger(RHandID);
       180: PushInteger(NextCPosY);
@@ -288,7 +289,7 @@ begin
       202: PushInteger(Dex);
       203: PushInteger(Followers);
       204: PushInteger(CharID);
-      205: PushStrVal(PChar(CliVer));
+      205: PushStrVal(PAnsiChar(CliVer));
       206: PushInteger(AR);
       207: PushInteger(CharDir);
       208: PushInteger(Hits);
@@ -297,13 +298,13 @@ begin
       211: PushBoolean(CliLogged);
       212: PushInteger(CR);
       213: PushInteger(ContSizeX);
-      214: PushStrVal(PChar(CliLang));
+      214: PushStrVal(PAnsiChar(CliLang));
       215: PushInteger(Mana);
       216: PushInteger(ContSizeY);
       217: PushInteger(LLiftedID);
-      218: PushStrVal(PChar(Shard));
-      219: PushStrVal(PChar(SysMsg));
-      220: PushStrVal(PChar(ContName));
+      218: PushStrVal(PAnsiChar(Shard));
+      219: PushStrVal(PAnsiChar(SysMsg));
+      220: PushStrVal(PAnsiChar(ContName));
       221: PushInteger(ER);
       222: PushInteger(MaxHits);
       223: PushInteger(CharPosZ);
@@ -320,10 +321,10 @@ begin
       234: PushInteger(Int);
       235: PushInteger(MaxStats);
       236: PushInteger(ContType);
-      237: PushStrVal(PChar(CharStatus));
+      237: PushStrVal(PAnsiChar(CharStatus));
       238: PushInteger(ContKind);
       239: PushInteger(MaxWeight);
-      240: PushStrVal(PChar(CharName));
+      240: PushStrVal(PAnsiChar(CharName));
       241: PushInteger(EnemyID);
       242: PushInteger(Gold);
       243: PushInteger(Sex);
@@ -346,7 +347,7 @@ begin
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-function TUOWrap.MSet(Name : String) : Integer;
+function TUOWrap.MSet(Name : AnsiString) : Integer;
 // sets the value of a variable
 var
   Res : TFindRes;
@@ -392,12 +393,12 @@ begin
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-function TUOWrap.MCall(Name : String) : Integer;
+function TUOWrap.MCall(Name : AnsiString) : Integer;
 // calls a function
 var
   Res : TFindRes;
   i   : Integer;
-  s   : String;
+  s   : AnsiString;
 begin
   Result:=ERR_NOTFOUND;
   if Find_First(Res,Name,@UOTbl,High(UOTbl)+1) then
@@ -424,8 +425,8 @@ begin
       009: ExMsg(GetInteger(3),GetInteger(4),GetInteger(5),GetString(6));
       010: begin
              EvProperty(GetInteger(3));
-             PushStrVal(PChar(PropStr1));
-             PushStrVal(PChar(PropStr2));
+             PushStrVal(PAnsiChar(PropStr1));
+             PushStrVal(PAnsiChar(PropStr2));
            end;
       011: if GetTop=3 then Pathfind(GetInteger(3),GetInteger(4),GetInteger(5))
            else Pathfind(GetInteger(3),GetInteger(4),UOVar.CharPosZ);
@@ -466,7 +467,7 @@ begin
            end;
       027: begin
              GetJournal(GetInteger(3));
-             PushStrVal(PChar(JournalStr));
+             PushStrVal(PAnsiChar(JournalStr));
              PushInteger(JournalCol);
            end;
       028: ExEv_DropPD;
@@ -478,12 +479,12 @@ begin
              else TileGet(GetInteger(3),GetInteger(4),GetInteger(5));
              PushInteger(TileType);
              PushInteger(TileZ);
-             PushStrVal(PChar(TileName));
+             PushStrVal(PAnsiChar(TileName));
              PushInteger(TileFlags);
            end;
       032: if GetCont(GetInteger(3)) then
            begin
-             PushStrVal(PChar(ContName));
+             PushStrVal(PAnsiChar(ContName));
              PushInteger(ContX);
              PushInteger(ContY);
              PushInteger(ContSX);
@@ -504,7 +505,7 @@ begin
              PushInteger(ShopType);
              PushInteger(ShopMax);
              PushInteger(ShopPrice);
-             PushStrVal(PChar(ShopName));
+             PushStrVal(PAnsiChar(ShopName));
            end
            else PushBoolean(False);
       035: PushBoolean(SetShopItem(GetInteger(3),GetInteger(4)));
@@ -527,7 +528,7 @@ begin
       040: StatBar(GetInteger(3));
       041: begin
              BlockInfo(GetInteger(3),GetInteger(4),GetInteger(5),GetInteger(6),GetInteger(7));
-             PushLStrVal(PChar(BlockStr),Length(BlockStr));
+             PushLStrVal(PAnsiChar(BlockStr),Length(BlockStr));
            end;
       042: begin
              FilterItems(GetInteger(3),GetInteger(4));
@@ -558,7 +559,7 @@ begin
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-function TUOWrap.MType(Name : String) : Integer;
+function TUOWrap.MType(Name : AnsiString) : Integer;
 // returns type information
 var
   Res : TFindRes;
@@ -656,7 +657,7 @@ function TUOWrap.Execute : Integer;
 // executes a command (get/set/call/type)
 var
   Res  : TFindRes;
-  Name : String;
+  Name : AnsiString;
 begin
   Stack.Mark;
   Result:=ERR_NOTFOUND;

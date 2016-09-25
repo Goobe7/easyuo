@@ -25,14 +25,14 @@ const
   CM = 16;
   QY = 32;
 
-  function Find_First(out Res : TFindRes; Name : String; Table : PAItem; Cnt : Integer) : Boolean;
+  function Find_First(out Res : TFindRes; Name : AnsiString; Table : PAItem; Cnt : Integer) : Boolean;
   function Find_Next(var Res : TFindRes) : Boolean;
   function ParComp(Stack : TStack; Idx : Integer; Mask : PAnsiChar) : Boolean;
 
 implementation
 
 ////////////////////////////////////////////////////////////////////////////////
-function Find_First(out Res : TFindRes; Name : String; Table : PAItem; Cnt : Integer) : Boolean;
+function Find_First(out Res : TFindRes; Name : AnsiString; Table : PAItem; Cnt : Integer) : Boolean;
 // finds first entry using binary search
 var
   a,m,z : Integer;

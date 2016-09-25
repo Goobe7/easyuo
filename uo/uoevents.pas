@@ -1,50 +1,50 @@
 unit uoevents;
 interface
-uses Windows, SysUtils, access, uocommands, uovariables, uoselector, uoclidata,
-     asmstring;
+uses Windows, SysUtils, uocommands, uovariables, uoselector, uoclidata,
+     asmstring, global;
 
 type
-  TDelayFunc     = function(Duration : Cardinal) : Boolean of object;
-  TUOEvent       = class(TObject)
+  TDelayFunc    = function(Duration : Cardinal) : Boolean of object;
+  TUOEvent      = class(TObject)
   private
-    AsmStr       : TAsmStr;
-    UOSel        : TUOSel;
-    UOVar        : TUOVar;
-    Cst          : TCstDB;
-    Delay        : TDelayFunc;
-    InitWnd      : Cardinal;
-    DragID       : Cardinal;
-    function     StdDelay(Duration : Cardinal) : Boolean;
-    procedure    RMem(MemPos : Cardinal; Buf : PAnsiChar; Length : Cardinal);
-    procedure    WMem(MemPos : Cardinal; Buf : PAnsiChar; Length : Cardinal);
-    procedure    InitEvents;
-    function     WaitTillProcessed : Boolean;
-    function     FindID(ID : Cardinal) : Cardinal;
-    function     GetFormStr(Addr : Cardinal) : AnsiString;
+    AsmStr      : TAsmStr;
+    UOSel       : TUOSel;
+    UOVar       : TUOVar;
+    Cst         : TCstDB;
+    Delay       : TDelayFunc;
+    InitWnd     : Cardinal;
+    DragID      : Cardinal;
+    function    StdDelay(Duration : Cardinal) : Boolean;
+    procedure   RMem(MemPos : Cardinal; Buf : PAnsiChar; Length : Cardinal);
+    procedure   WMem(MemPos : Cardinal; Buf : PAnsiChar; Length : Cardinal);
+    procedure   InitEvents;
+    function    WaitTillProcessed : Boolean;
+    function    FindID(ID : Cardinal) : Cardinal;
+    function    GetFormStr(Addr : Cardinal) : AnsiString;
   public
-    PropStr1     : AnsiString;
-    PropStr2     : AnsiString;
-    BlockStr     : AnsiString;
-    constructor  Create(UOS : TUOSel; UOV : TUOVar; DFunc : TDelayFunc);
-    destructor   Destroy; override;
-    procedure    SysMessage(Msg : AnsiString; Col : Cardinal = 0);
-    procedure    StatBar(ID : Cardinal);
-    procedure    ContTop(Index : Integer);
-    procedure    Drag(ID : Cardinal);
-    procedure    ExMsg(ID,Font,Color : Cardinal; Msg : AnsiString);
-    procedure    Pathfind(X,Y : Cardinal; Z : Integer = $7FFFFFFF);
-    procedure    Macro(Par1, Par2 : Cardinal; Str : AnsiString = '');
-    function     EvProperty(ID : Cardinal) : Boolean;
-    function     BlockInfo(X,Y,Z,W,H : Integer) : Boolean;
-    procedure    SendPacket(Packet : AnsiString);
-    procedure    ExEv_Drag(ID : Cardinal; Amount : Cardinal = 1);
-    procedure    ExEv_DropC(ContID : Cardinal; X : Integer = -1; Y : Integer = -1);
-    procedure    ExEv_DropG(X,Y : Cardinal; Z : Integer = $7FFFFFFF);
-    procedure    ExEv_DropPD;
-    procedure    ExEv_SkillLock(SkillStr : AnsiString; Lock : Cardinal);
-    procedure    ExEv_StatLock(Stat : AnsiString; Lock : Cardinal);
-    procedure    ExEv_RenamePet(ID : Cardinal; Name : AnsiString);
-    procedure    ExEv_PopUp(ID : Cardinal; X,Y : Integer);
+    PropStr1    : AnsiString;
+    PropStr2    : AnsiString;
+    BlockStr    : AnsiString;
+    constructor Create(UOS : TUOSel; UOV : TUOVar; DFunc : TDelayFunc);
+    destructor  Destroy; override;
+    procedure   SysMessage(Msg : AnsiString; Col : Cardinal = 0);
+    procedure   StatBar(ID : Cardinal);
+    procedure   ContTop(Index : Integer);
+    procedure   Drag(ID : Cardinal);
+    procedure   ExMsg(ID,Font,Color : Cardinal; Msg : AnsiString);
+    procedure   Pathfind(X,Y : Cardinal; Z : Integer = $7FFFFFFF);
+    procedure   Macro(Par1, Par2 : Cardinal; Str : AnsiString = '');
+    function    EvProperty(ID : Cardinal) : Boolean;
+    function    BlockInfo(X,Y,Z,W,H : Integer) : Boolean;
+    procedure   SendPacket(Packet : AnsiString);
+    procedure   ExEv_Drag(ID : Cardinal; Amount : Cardinal = 1);
+    procedure   ExEv_DropC(ContID : Cardinal; X : Integer = -1; Y : Integer = -1);
+    procedure   ExEv_DropG(X,Y : Cardinal; Z : Integer = $7FFFFFFF);
+    procedure   ExEv_DropPD;
+    procedure   ExEv_SkillLock(SkillStr : AnsiString; Lock : Cardinal);
+    procedure   ExEv_StatLock(Stat : AnsiString; Lock : Cardinal);
+    procedure   ExEv_RenamePet(ID : Cardinal; Name : AnsiString);
+    procedure   ExEv_PopUp(ID : Cardinal; X,Y : Integer);
   end;
 
 implementation

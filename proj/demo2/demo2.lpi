@@ -4,15 +4,12 @@
     <Version Value="9"/>
     <PathDelim Value="\"/>
     <General>
-      <Flags>
-        <MainUnitHasCreateFormStatements Value="False"/>
-        <MainUnitHasTitleStatement Value="False"/>
-      </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="uo"/>
+      <Title Value="demo2"/>
       <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
     </General>
     <i18n>
       <EnableI18N LFM="False"/>
@@ -31,22 +28,34 @@
         <FormatVersion Value="1"/>
       </local>
     </RunParams>
-    <Units Count="1">
+    <RequiredPackages Count="1">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+    </RequiredPackages>
+    <Units Count="2">
       <Unit0>
-        <Filename Value="uo.lpr"/>
+        <Filename Value="demo2.lpr"/>
         <IsPartOfProject Value="True"/>
       </Unit0>
+      <Unit1>
+        <Filename Value="main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit1>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="bin\uo"/>
+      <Filename Value="bin\demo2"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\..\uo;..\..\uodll;..\..\lib"/>
+      <OtherUnitFiles Value="..\..\lib"/>
       <UnitOutputDirectory Value="bin\obj"/>
     </SearchPaths>
     <Parsing>
@@ -66,7 +75,6 @@
         <Win32>
           <GraphicApplication Value="True"/>
         </Win32>
-        <ExecutableType Value="Library"/>
       </Options>
     </Linking>
   </CompilerOptions>

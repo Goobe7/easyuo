@@ -1,0 +1,84 @@
+object MainForm: TMainForm
+  Left = 263
+  Height = 153
+  Top = 122
+  Width = 321
+  BorderStyle = bsSingle
+  Caption = 'Demo2'
+  ClientHeight = 153
+  ClientWidth = 321
+  Position = poDesktopCenter
+  LCLVersion = '1.6.0.4'
+  object WaitButton: TButton
+    Left = 16
+    Height = 26
+    Top = 16
+    Width = 136
+    Caption = 'Wait'
+    OnClick = WaitButtonClick
+    TabOrder = 0
+  end
+  object HotkeyButton: TButton
+    Left = 16
+    Height = 26
+    Top = 48
+    Width = 136
+    Caption = 'OnHotKey'
+    OnClick = OnHotkeyButtonClick
+    TabOrder = 1
+  end
+  object ShutdownButton: TButton
+    Left = 16
+    Height = 26
+    Top = 80
+    Width = 136
+    Caption = 'Shutdown'
+    OnClick = ShutdownButtonClick
+    TabOrder = 2
+  end
+  object ExecuteButton: TButton
+    Left = 16
+    Height = 26
+    Top = 112
+    Width = 136
+    Caption = 'Execute'
+    OnClick = ExecuteButtonClick
+    TabOrder = 3
+  end
+  object SoundButton: TButton
+    Left = 168
+    Height = 26
+    Top = 16
+    Width = 136
+    Caption = 'Sound'
+    OnClick = SoundButtonClick
+    TabOrder = 4
+  end
+  object SetCliTitleButton: TButton
+    Left = 168
+    Height = 26
+    Top = 48
+    Width = 136
+    Caption = 'SetCliTitle'
+    OnClick = SetCliTitleButtonClick
+    TabOrder = 5
+  end
+  object HTTPPostButton: TButton
+    Left = 168
+    Height = 26
+    Top = 112
+    Width = 136
+    Caption = 'HTTPPost'
+    OnClick = HTTPPostButtonClick
+    TabOrder = 6
+  end
+  object HTTPGetButton: TButton
+    Left = 168
+    Height = 26
+    Top = 80
+    Width = 136
+    Caption = 'HTTPGet'
+    OnClick = HTTPGetButtonClick
+    TabOrder = 7
+  end
+end

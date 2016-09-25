@@ -1,6 +1,6 @@
 unit uoversion;
 interface
-uses Windows, SysUtils, Classes, access;
+uses Windows, SysUtils, Classes, global;
 
   // This unit provides version information of client executables.
 

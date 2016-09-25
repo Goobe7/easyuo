@@ -55,7 +55,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\..\uo"/>
+      <OtherUnitFiles Value="..\..\uo;..\..\lib"/>
       <UnitOutputDirectory Value="bin\obj"/>
     </SearchPaths>
     <CodeGeneration>

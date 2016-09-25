@@ -48,10 +48,10 @@ type
     function BlockOverride(var list:TList; blocknumber:longword; var posi:longword):boolean;
     function GetBlockNumber(x, y:word; facet:byte; var BlockNumber:longword) : boolean;
   public
-    constructor init(p:string; usedif:boolean; CstDB : TCstDB);
+    constructor init(p:AnsiString; usedif:boolean; CstDB : TCstDB);
     function GetLayerCount(x, y:word; facet:byte; var tilecnt:byte):boolean;
     function GetTileData(x, y:word; facet:byte; layer:byte; var TileType:word;
-      var tilez:shortint; var TileName:string; var tileflags:longword):boolean;
+      var tilez:shortint; var TileName:AnsiString; var tileflags:longword):boolean;
     destructor destroy; override;
   end;
 
@@ -62,11 +62,11 @@ implementation
   Purpose   : Create the Object
               Assign all the nessecary filestream
               Load the Difblockindex into a TList when usedif = true
-  Arguments : p:String - The Path to the UO Directory
+  Arguments : p:AnsiString - The Path to the UO Directory
               usedif:boolean - if the override data from the dif files should be used
   Result    : None
 -----------------------------------------------------------------------------}
-constructor TTTBasic.init(p:string; usedif:boolean; CstDB : TCstDB);
+constructor TTTBasic.init(p:AnsiString; usedif:boolean; CstDB : TCstDB);
   //open the layer0 file (the basic map)
   procedure openmapfiles;
   begin
@@ -128,7 +128,7 @@ constructor TTTBasic.init(p:string; usedif:boolean; CstDB : TCstDB);
         fmShareDenyNone));
   end;
   //This is used to load the blocks that need to be overriden into an TList
-  procedure LoadList(var list:TList; filename:string);
+  procedure LoadList(var list:TList; filename:AnsiString);
     function Find(value:longword; var Index: Longword): Boolean;
     var
       L, H, I, C: Integer;
@@ -437,7 +437,7 @@ end;
               GetTileData:boolean -> Will be False in case of problems
 -----------------------------------------------------------------------------}
 function TTTBasic.GetTileData(x, y:word; facet:byte; layer:byte;
-  var TileType:word; var tilez:shortint; var TileName:string;
+  var TileType:word; var tilez:shortint; var TileName:AnsiString;
   var tileflags:longword):boolean;
   //The TileData is stored in the statics or stadif.mul (layer > 0)
   //Works as with diffiles as with the normal files
@@ -480,7 +480,7 @@ function TTTBasic.GetTileData(x, y:word; facet:byte; layer:byte;
 var
   blocknumber:longword;
   difpos:longword;
-  temptilename:array[0..19] of char;
+  temptilename:array[0..19] of AnsiChar;
   landdata_size : Cardinal;
   tiledata_size : Cardinal;
 begin

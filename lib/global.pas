@@ -1,13 +1,14 @@
-unit access;
+unit global;
 interface
-uses Windows;
+uses Windows, SysUtils;
 
-  // This unit provides functions for memory access and is used almost everywhere.
+  // This unit provides useful functions and is used globally in various projects.
 
   function ReadMem(PHnd : Cardinal; MemPos : Cardinal; Buf : PAnsiChar; Size : Cardinal) : Boolean;
   function WriteMem(PHnd : Cardinal; MemPos : Cardinal; Buf : PAnsiChar; Size : Cardinal) : Boolean;
   function SearchMem(PHnd : Cardinal; ScanStr : AnsiString; Joker : AnsiChar) : Cardinal;
   function NumStr(Value, Size : Cardinal; Intel : Boolean) : AnsiString;
+  function GetVK(KeyStr : AnsiString) : Cardinal;
 
 implementation
 
@@ -120,6 +121,7 @@ end;
 
 ////////////////////////////////////////////////////////////////////////////////
 function SearchMem(PHnd : Cardinal; ScanStr : AnsiString; Joker : AnsiChar) : Cardinal;
+// searches the program area for a string
 const
   MEM_START = $00400000; // start of code for most windows programs
   MEM_END   = $00680000; // client code usually ends around here
@@ -172,6 +174,42 @@ begin
   end;
 
   Result:=s;
+end;
+
+////////////////////////////////////////////////////////////////////////////////
+function GetVK(KeyStr : AnsiString) : Cardinal;
+// converts string into virtual key code
+const
+  Keys : array[0..22] of AnsiString = (
+    'f10','f11','f12','esc','back','tab','enter','pause','capslock','space',
+    'pgup','pgdn','end','home','left','right','up','down','prnscr','insert',
+    'delete','numlock','scrolllock');
+  Code : array[0..22] of Cardinal = (
+    VK_F10,VK_F11,VK_F12,VK_ESCAPE,VK_BACK,VK_TAB,VK_RETURN,VK_PAUSE,
+    VK_CAPITAL,VK_SPACE,VK_PRIOR,VK_NEXT,VK_END,VK_HOME,VK_LEFT,VK_RIGHT,
+    VK_UP,VK_DOWN,VK_SNAPSHOT,VK_INSERT,VK_DELETE,VK_NUMLOCK,VK_SCROLL);
+var
+  i : Integer;
+  s : AnsiString;
+begin
+  s:=LowerCase(KeyStr);
+  Result:=0;
+
+  // normal key?
+  if Length(s)=1 then
+    if s[1] in ['a'..'z','0'..'9'] then
+      Result:=Byte(s[1])-32;
+
+  // f1..f9?
+  if Length(s)=2 then
+    if (s[1]='f')and(s[2] in ['1'..'9']) then
+      Result:=Byte(VK_F1+Byte(s[2])-49);
+
+  // special key?
+  if Result=0 then
+    for i:=0 to High(Keys) do
+      if s=Keys[i] then
+        Result:=Code[i];
 end;
 
 ////////////////////////////////////////////////////////////////////////////////

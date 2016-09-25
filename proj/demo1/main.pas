@@ -4,9 +4,6 @@ uses Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs,
      StdCtrls, ExtCtrls, uoselector, uovariables, uocommands, uoevents;
 
 type
-
-  { TMainForm }
-
   TMainForm = class(TForm)
     CloseClientButton: TButton;
     DragButton: TButton;
@@ -55,26 +52,26 @@ implementation
 {$R *.lfm}
 
 ////////////////////////////////////////////////////////////////////////////////
-function i2s(i : Integer) : String;
+function i2s(i : Integer) : AnsiString;
 begin
   Result:=IntToStr(i);
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-function b2s(b : Boolean) : String;
+function b2s(b : Boolean) : AnsiString;
 begin
   Result:='False';
   if b then Result:='True';
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-function s2i(s : String) : Integer;
+function s2i(s : AnsiString) : Integer;
 begin
   Result:=StrToIntDef(s,0);
 end;
 
 ////////////////////////////////////////////////////////////////////////////////
-function UpdateVariables : String;
+function UpdateVariables : AnsiString;
 begin
   Inc(UpdateCnt);
   if UpdateCnt mod 10 = 0 then
